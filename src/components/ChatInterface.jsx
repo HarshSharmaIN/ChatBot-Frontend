@@ -29,7 +29,7 @@ function ChatInterface({ messages, input, setInput, handleSubmit, chatContainerR
           />
           <button
             type="submit"
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl px-6 py-3 hover:opacity-90 transition-opacity duration-200 flex items-center gap-2 w-full sm:w-auto" // w-full on small, w-auto on larger
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl px-6 py-3 hover:opacity-90 transition-opacity duration-200 flex justify-center items-center gap-2 w-full sm:w-auto" // w-full on small, w-auto on larger
           >
             <Send className="w-5 h-5" />
             <span className="hidden sm:inline">Send</span>
