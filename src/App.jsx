@@ -154,7 +154,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-4xl mx-auto p-4">
+      <div className="max-w-4xl mx-auto p-4 sm:p-6">
         <ChatInterface
           messages={messages}
           input={input}
@@ -165,7 +165,7 @@ function App() {
         {showRecommendDoctorsButton && (
           <button
             onClick={handleShowRecommendedDoctors}
-            className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="mt-4 w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Show Recommended Doctors
           </button>

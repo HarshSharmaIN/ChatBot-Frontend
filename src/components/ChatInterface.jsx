@@ -10,13 +10,16 @@ function ChatInterface({ messages, input, setInput, handleSubmit, chatContainerR
           <h1 className="text-white text-2xl font-semibold">Medical Assistant</h1>
         </div>
       </div>
-      <div ref={chatContainerRef} className="h-[500px] overflow-y-auto p-6 space-y-4">
+      <div
+        ref={chatContainerRef}
+        className="h-[400px] sm:h-[500px] overflow-y-auto p-6 space-y-4"
+      >
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
       </div>
       <form onSubmit={handleSubmit} className="border-t p-4 bg-gray-50">
-        <div className="flex gap-3">
+        <div className="flex flex-row gap-3"> {/* Use flex-row here */}
           <input
             type="text"
             value={input}

@@ -10,11 +10,11 @@ export const ChatMessage = ({ message }) => {
     return (
       <div className={`flex justify-start mb-4`}>
         <div className={`flex items-start gap-3 flex-row`}>
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100`}>
+          <div className={`w-[8%] h-[8%] min-w-[40px] min-h-[40px] rounded-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100`}>
             <Bot className="w-6 h-6 text-blue-600" />
           </div>
-          <div className={`max-w-md px-6 py-3 rounded-2xl bg-white border border-blue-100 text-gray-800 shadow-sm`}>
-            <Loader/>
+          <div className={`max-w-xs sm:max-w-md px-6 py-3 rounded-2xl bg-white border border-blue-100 text-gray-800 shadow-sm`}>
+            <Loader />
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ export const ChatMessage = ({ message }) => {
           )}
         </div>
         <div
-          className={`max-w-md px-6 py-3 rounded-2xl ${
+          className={`max-w-xs sm:max-w-md px-6 py-3 rounded-2xl ${
             isBot
               ? 'bg-white border border-blue-100 text-gray-800 shadow-sm'
               : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'

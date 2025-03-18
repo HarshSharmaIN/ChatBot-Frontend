@@ -5,7 +5,7 @@ export const DoctorCard = ({ doctor }) => {
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100 hover:shadow-xl transition-shadow duration-300">
       <div className="h-48 relative">
         <img
-          src={doctor.image}
+          src={doctor.image || "https://www.shutterstock.com/image-vector/male-doctor-smiling-happy-face-holding-2481032615"}
           alt={doctor.name}
           className="w-full h-full object-cover"
         />
@@ -13,14 +13,16 @@ export const DoctorCard = ({ doctor }) => {
         <div className="absolute bottom-3 left-3 right-3">
           <div className="flex items-center gap-1 text-white">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">{doctor.rating}</span>
+            <span className="text-sm font-medium">
+              {doctor.rating}/5
+            </span>
           </div>
         </div>
       </div>
       <div className="p-4">
         <h3 className="font-semibold text-lg text-gray-900">{doctor.name}</h3>
         <p className="text-blue-600 font-medium">{doctor.specialization}</p>
-        
+
         <div className="mt-4 space-y-2">
           <div className="flex items-center gap-2 text-gray-600">
             <Calendar className="w-4 h-4" />
@@ -28,7 +30,7 @@ export const DoctorCard = ({ doctor }) => {
           </div>
           <button className="w-full mt-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity duration-200">
             <Phone className="w-4 h-4" />
-            <span>Book Appointment</span>
+            <span className="text-sm">Book Appointment</span>
           </button>
         </div>
       </div>
